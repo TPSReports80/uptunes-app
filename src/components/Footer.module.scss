@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.footer {
+  color: darkslategray;
+  background: linear-gradient(135deg, #f7890c 0%, #f7ef51 100%);
+}

@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: local("SF Pro Display"),
+    url(./fonts/sfprodisplaybold.otf) format("opentype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: local("SF Pro Display"),
+    url(./fonts/sfprodisplaysemibolditalic.otf) format("opentype");
+  font-style: italic;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: local("SF Pro Display"),
+    url(./fonts/sfprodisplaysemibold.otf) format("opentype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: local("SF Pro Display"),
+    url(./fonts/sfprodisplaymedium.otf) format("opentype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: local("SF Pro Display"),
+    url(./fonts/sfprodisplayregular.otf) format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: local("SF Pro Display"),
+    url(./fonts/sfprodisplaythin.otf) format("opentype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: local("SF Pro Display"),
+    url(./fonts/sfprodisplaythinitalic.otf) format("opentype");
+  font-style: italic;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: local("SF Pro Display"),
+    url(./fonts/sfprodisplayultrathin.otf) format("opentype");
+  font-weight: 200;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  font-size: 22px;
+  font-family: "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  justify-content: space-between;
+}
+.container {
+  padding-left: 30px;
+  padding-right: 30px;
+}

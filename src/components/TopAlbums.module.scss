@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#topAlbums {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 147, 143, 1) 0%,
+    rgba(0, 80, 101, 1) 47%,
+    rgba(0, 39, 78, 1) 100%
+  );
+  .searchInput {
+    box-shadow: 4px 6px 7px #212121;
+  }
+  .searchIcon {
+    position: absolute;
+    top: 19px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    color: #b8b8b8;
+  }
+}

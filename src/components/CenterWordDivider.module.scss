@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.title {
+  display: flex;
+  flex-direction: row;
+  &::before,
+  &::after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 2px solid #fff;
+    margin: auto;
+  }
+  &::before {
+    margin-right: 15px;
+  }
+  &::after {
+    margin-left: 15px;
+  }
+}
