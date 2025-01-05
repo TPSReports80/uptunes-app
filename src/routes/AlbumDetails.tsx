@@ -11,9 +11,7 @@ import TitleDivider from "../components/TitleDivider";
 import { MdFavorite, MdFavoriteBorder } from "react-icons/md";
 import TrackList from "../components/TrackList";
 
-type Props = {};
-
-const AlbumDetails = (props: Props) => {
+const AlbumDetails = () => {
   const { addFavorite, removeFavorite, isFavorite } =
     useContext(FavoriteContext);
 

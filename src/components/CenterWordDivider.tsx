@@ -1,8 +1,6 @@
 import styles from "./CenterWordDivider.module.scss";
 
-type Props = {};
-
-const CenterWordDivider = (props: Props) => {
+const CenterWordDivider = () => {
   return (
     <h4
       className={`text-center uppercase font-semibold text-xl max-md:text-lg tracking-4 mb-14 text-white ${styles.title} `}

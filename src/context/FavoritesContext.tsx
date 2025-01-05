@@ -10,9 +10,9 @@ interface FavoriteContextType {
 
 export const FavoriteContext = createContext<FavoriteContextType>({
   favorites: [],
-  addFavorite: (album) => {},
-  removeFavorite: (album) => {},
-  isFavorite: (album) => false,
+  addFavorite: () => {},
+  removeFavorite: () => {},
+  isFavorite: () => false,
 });
 
 type FavoriteProviderProps = {

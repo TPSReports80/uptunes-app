@@ -4,9 +4,7 @@ import { useContext } from "react";
 import { FavoriteContext } from "../context/FavoritesContext";
 import { MdFavorite } from "react-icons/md";
 
-type Props = {};
-
-const Nav = (props: Props) => {
+const Nav = () => {
   const { favorites } = useContext(FavoriteContext);
   const navigate = useNavigate();
   const handleClick = () => {

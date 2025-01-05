@@ -4,11 +4,7 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import styles from "./Footer.module.scss";
 
-type Props = {
-  isErrorPage?: boolean;
-};
-
-const Footer = ({ isErrorPage }: Props) => {
+const Footer = () => {
   return (
     <footer className={`${styles.footer} `}>
       <div className="container mx-auto py-20">

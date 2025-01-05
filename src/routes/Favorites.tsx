@@ -6,9 +6,7 @@ import styles from "./Favorites.module.scss";
 import { MdFavoriteBorder, MdFavorite } from "react-icons/md";
 import { useNavigate, Link } from "react-router-dom";
 
-type Props = {};
-
-const Favorites = (props: Props) => {
+const Favorites = () => {
   const { favorites, removeFavorite } = useContext(FavoriteContext);
   const navigate = useNavigate();
 

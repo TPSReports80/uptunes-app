@@ -2,9 +2,7 @@ import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import styles from "./NotFoundPage.module.scss";
 
-type Props = {};
-
-const NotFoundPage = (props: Props) => {
+const NotFoundPage = () => {
   return (
     <>
       <main className={styles.main}>
@@ -23,7 +21,7 @@ const NotFoundPage = (props: Props) => {
           </div>
         </section>
       </main>
-      <Footer isErrorPage={true} />
+      <Footer />
     </>
   );
 };

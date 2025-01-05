@@ -1,7 +1,6 @@
 import styles from "./LoadingPage.module.scss";
-type Props = {};
 
-const LoadingPage = (props: Props) => {
+const LoadingPage = () => {
   return (
     <main>
       <section className={styles.section}>
