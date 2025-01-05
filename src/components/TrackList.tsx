@@ -12,12 +12,11 @@ const TrackList = ({ album }: Props) => {
   function getAlbumInfo() {
     return axios
       .get(
-        `https://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=${
-          import.meta.env.VITE_LAST_FM_API_KEY
-        }&artist=${album?.["im:artist"].label.replaceAll(
-          /%/g,
-          " "
-        )}&album=${album?.["im:name"].label.replaceAll(/%/g, " ")}&format=json`
+        `https://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=c4779b96e5eaa35221c79ccec89b6857&artist=${album?.[
+          "im:artist"
+        ].label.replaceAll(/%/g, " ")}&album=${album?.[
+          "im:name"
+        ].label.replaceAll(/%/g, " ")}&format=json`
       )
       .then((res) => res.data.album);
   }
@@ -27,7 +26,15 @@ const TrackList = ({ album }: Props) => {
   });
 
   if (albumQuery.isLoading) {
-    return <p>Loading...</p>;
+    return <p className="text-base text-gray-500">Loading...</p>;
+  }
+  if (albumQuery.isError) {
+    return (
+      <p>
+        Sorry, something went wrong while retrieving your track list. Try
+        selecting a different album.
+      </p>
+    );
   }
 
   if (!albumQuery.data.tracks) {
