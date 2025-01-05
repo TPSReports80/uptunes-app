@@ -53,7 +53,9 @@ const TrendingAlbums = ({ trending }: Props) => {
                   src={album["im:image"][2].label}
                   alt="album cover"
                   className="rounded-md mb-5 w-full cursor-pointer"
-                  onClick={() => handleClick(album["im:name"].label)}
+                  onClick={() =>
+                    handleClick(album["im:name"].label.replaceAll(" ", "_"))
+                  }
                 />
                 <div>
                   <h5 className="text-lg font-semibold mb-2">
@@ -88,7 +90,7 @@ const TrendingAlbums = ({ trending }: Props) => {
               </div>
 
               <Button
-                url={`/album/${album["im:name"].label}`}
+                url={`/album/${album["im:name"].label.replaceAll(" ", "_")}`}
                 adjustWidth={true}
                 text="View details"
               />

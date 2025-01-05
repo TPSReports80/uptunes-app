@@ -50,7 +50,9 @@ const TopAlbums = ({ topAlbumsSection, albums }: Props) => {
             <div
               key={i}
               className="cursor-pointer"
-              onClick={() => handleClick(album["im:name"].label)}
+              onClick={() =>
+                handleClick(album["im:name"].label.replaceAll(" ", "_"))
+              }
             >
               <img
                 src={album["im:image"][2].label}

@@ -17,7 +17,7 @@ const FeaturedAlbum = ({ featured }: Props) => {
     useContext(FavoriteContext);
 
   const handleClick = () => {
-    navigate(`/album/${featured?.["im:name"].label}`);
+    navigate(`/album/${featured?.["im:name"].label.replaceAll(" ", "_")}`);
   };
 
   return (
@@ -65,7 +65,7 @@ const FeaturedAlbum = ({ featured }: Props) => {
 
             <Button
               text="View details"
-              url={`/album/${featured?.["im:name"].label}`}
+              url={`/album/${featured?.["im:name"].label.replaceAll(" ", "_")}`}
             />
           </div>
         </div>

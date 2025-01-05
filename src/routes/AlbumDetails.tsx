@@ -36,7 +36,8 @@ const AlbumDetails = () => {
   }
 
   const filteredAlbum = albumQuery.data.find(
-    (album: Album) => album["im:name"].label === id
+    (album: Album) =>
+      album["im:name"].label.replaceAll(" ", "_") === id?.replaceAll(" ", "_")
   );
 
   return (
