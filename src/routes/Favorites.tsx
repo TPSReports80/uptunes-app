@@ -24,11 +24,16 @@ const Favorites = () => {
           <div className="container mx-auto py-20">
             <TitleDivider text="Favorite Albums" />
             {favorites.length < 1 && (
-              <div className="text-base flex gap-1 items-center justify-center">
-                <p>No favorites added. Click on the favorites icon</p>
-                <MdFavoriteBorder />
-                <p> to save your album to your favorites list.</p>
-              </div>
+              <>
+                <div className="text-base flex gap-1 items-center justify-center max-md:hidden">
+                  <p>No favorites added. Click on the favorites icon</p>
+                  <MdFavoriteBorder />
+                  <p> to save your album to your favorites list.</p>
+                </div>
+                <div className="md:hidden text-base flex justify-center">
+                  <p>No favorites added.</p>
+                </div>
+              </>
             )}
             {favorites.map((album) => (
               <div
