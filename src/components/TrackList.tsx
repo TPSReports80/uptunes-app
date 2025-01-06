@@ -41,7 +41,7 @@ const TrackList = ({ album }: Props) => {
     return (
       <div className="mt-20">
         <TitleDivider text="Tracks List" />
-        <p className="text-base text-center">No tracks available</p>
+        <p className="text-base text-center">Tracks list unavailable.</p>
       </div>
     );
   }
