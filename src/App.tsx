@@ -6,6 +6,7 @@ import HeroBanner from "./components/HeroBanner";
 import FeaturedAlbum from "./components/FeaturedAlbum";
 import TrendingAlbums from "./components/TrendingAlbums";
 import { handleScrollToSection } from "./utils/handleScroll";
+import { Album } from "./utils/types";
 import TopAlbums from "./components/TopAlbums";
 import { useQuery } from "@tanstack/react-query";
 import LoadingPage from "./components/LoadingPage";
@@ -36,6 +37,10 @@ function App() {
     return <NotFoundPage />;
   }
 
+  const featuredAlbum = albumQuery.data.find(
+    (album: Album) => album?.["im:name"].label === "Wicked: The Soundtrack"
+  );
+
   return (
     <main>
       {/* Hero Banner */}
@@ -44,7 +49,7 @@ function App() {
         handleScrollToSection={() => handleScrollToSection(topAlbumsSection)}
       />
       {/* Featured Album */}
-      <FeaturedAlbum featured={albumQuery.data[0]} />
+      <FeaturedAlbum featured={featuredAlbum} />
       {/* Trending Albums */}
       <TrendingAlbums trending={albumQuery.data.slice(6, 10)} />
       {/* Top Albums */}
