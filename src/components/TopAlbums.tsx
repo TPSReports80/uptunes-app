@@ -70,7 +70,7 @@ const TopAlbums = ({ topAlbumsSection, albums }: Props) => {
             {genreArray.map((genre) => (
               <button
                 onClick={() => genreHandler(genre)}
-                className={` text-sm  border  py-2 px-4 ${
+                className={` text-sm  border  py-2 px-4 shadow-md shadow-black ${
                   selectedGenre.includes(genre)
                     ? "bg-white text-blue-900"
                     : "text-white"
